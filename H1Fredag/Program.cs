@@ -1,6 +1,41 @@
 ﻿global using H1Fredag.Codes;
 global using H1Fredag.Codes.SystemIO;
 
+MenuText();
+bool menuWhile = false;
+Console.CursorVisible = false;
+while (menuWhile == false)
+{
+    var input = Console.ReadKey(true);
+    switch (input.Key)
+    {
+        case ConsoleKey.D1:
+            Console.CursorVisible = true;
+
+            MenuText();
+            break;
+        case ConsoleKey.D2:
+            Console.CursorVisible = true;
+
+            MenuText();
+            break;
+        case ConsoleKey.D3:
+            Console.CursorVisible = true;
+
+            MenuText();
+            break;
+        default:
+            Console.CursorVisible = false;
+
+            break;
+    }
+}
+
+static void MenuText()
+{
+    Console.WriteLine("Tast 1 for at tilgå X. \nTast 2 for at tilgå Y. \nTast 3 for at tilgå Z.");
+}
+
 //int age = 50;
 //string birthDateInDanishFormat = "23-02-1971";
 //double timeSpanInTotalDays = 1778.777;
